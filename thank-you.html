@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thank You | Roots for Tomorrow</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/brand.css">
+<script src="assets/js/config.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  // Fire the conversion event only once per real enquiry: the form leaves a one-time lead_id in this tab.
+  (function () {
+    var id = null;
+    try { id = sessionStorage.getItem("rft_ty"); sessionStorage.removeItem("rft_ty"); } catch (e) {}
+    window.dataLayer.push(id
+      ? { event: "lead_thank_you", project: "Roots for Tomorrow", lead_id: id }
+      : { event: "thank_you_revisit", project: "Roots for Tomorrow" });
+  })();
+  (function (id) {
+    if (!id) return;
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',id);
+  })(window.SS_CONFIG && window.SS_CONFIG.gtmId);
+</script>
+</head>
+<body>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></symbol>
+</svg>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Back to the Roots for Tomorrow page"><img src="assets/img/sowparnika-logo.png" width="447" height="276" alt="Sowparnika · Delivering Happiness"></a>
+    <a class="phone-pill js-phone" href="#" aria-label="Call sales">
+      <span class="flag" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>+91 <span class="js-phone-text"></span></span>
+    </a>
+  </div>
+</header>
+
+<main class="ty">
+  <div class="wrap">
+    <section class="ty-card" aria-labelledby="ty-title">
+      <div class="ty-tick" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+      <h1 id="ty-title" class="display center">Thank you. We've received your enquiry.</h1>
+      <p class="ty-lede">A Roots for Tomorrow sales expert will call you shortly with the pre-launch price, EOI details and site-visit slots.</p>
+      <ol class="ty-steps">
+        <li><span class="no">1</span><span><strong>Expect a call</strong> from the sales team on the number you shared, typically within working hours today.</span></li>
+        <li><span class="no">2</span><span><strong>Cost sheet &amp; floor plans</strong> for the 2 &amp; 3 BHK layouts will be shared on WhatsApp or email.</span></li>
+        <li><span class="no">3</span><span><strong>Pick a site-visit slot</strong> to see the land at Poojena Agrahara, off Whitefield–Hoskote Road.</span></li>
+      </ol>
+      <div class="ty-actions">
+        <a class="btn js-phone" href="#"><svg aria-hidden="true" width="16" height="16"><use href="#i-phone"/></svg>&nbsp;Call Sales Now</a>
+        <a class="btn-outline js-whatsapp" href="#" target="_blank" rel="noopener" hidden><svg aria-hidden="true" width="16" height="16"><use href="#i-wa"/></svg>&nbsp;Chat on WhatsApp</a>
+      </div>
+      <p class="ty-note"><strong>Before you visit:</strong> keep a photo ID handy for the EOI, and ask the team for the written cost sheet with GST, parking, maintenance deposit and registration listed separately.</p>
+      <a class="ty-back" href="index.html">← Back to Roots for Tomorrow</a>
+    </section>
+  </div>
+</main>
+
+<script>
+(function () {
+  var CFG = window.SS_CONFIG || {};
+  document.querySelectorAll(".js-phone").forEach(function (a) { if (CFG.phoneE164) a.href = "tel:" + CFG.phoneE164; else a.hidden = true; });
+  if (CFG.phoneDisplay) document.querySelectorAll(".js-phone-text").forEach(function (s) { s.textContent = String(CFG.phoneDisplay); });
+  if (CFG.whatsappNumber) {
+    var href = "https://wa.me/" + String(CFG.whatsappNumber).replace(/\D/g, "") + "?text=" + encodeURIComponent(CFG.whatsappMessage || "");
+    document.querySelectorAll(".js-whatsapp").forEach(function (a) { a.href = href; a.hidden = false; });
+  }
+})();
+</script>
+</body>
+</html>

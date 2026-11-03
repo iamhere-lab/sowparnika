@@ -354,3 +354,4 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .cp-label { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; line-height: 1.35; color: var(--beige); white-space: nowrap; }
 @media (max-width: 480px) { .brand-cp { gap: 10px; } .brand-cp img { height: 44px; } .cp-div { height: 32px; } .cp-label { font-size: 10px; letter-spacing: .08em; } }
 .site-footer .foot-grid { grid-template-columns: 1fr !important; }
+.seal-pill { white-space: nowrap; letter-spacing: .2em; }

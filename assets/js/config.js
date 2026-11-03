@@ -41,7 +41,7 @@ window.SS_CONFIG = {
   partnerEmail: "",
 
   /* Channel-partner / agent RERA number, shown in the footer when set. */
-  agentRera: "",
+  agentRera: "PRM/KA/RERA/1251/310/AG/230119/003356",
 
   /* Named in the consent line: who will contact the enquirer. Confirm before launch. */
   consentEntity: "",

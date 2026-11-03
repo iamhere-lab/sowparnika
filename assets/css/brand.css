@@ -345,3 +345,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .about-mark { width: 150px; }
 .foot-partner { margin: 0 0 10px; font-size: 13.5px; color: #E3CDB6; }
 .site-footer .disclaimer a { color: #fff; }
+
+/* ---------- header lockup: Sowparnika logo | Authorized Channel Partner (replaces the top strip) ---------- */
+:root { --header-h: 88px; }
+.brand-cp { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; min-width: 0; }
+.brand-cp img { height: 58px; width: auto; flex: none; }
+.cp-div { width: 1px; height: 40px; background: var(--line); flex: none; }
+.cp-label { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; line-height: 1.35; color: var(--beige); white-space: nowrap; }
+@media (max-width: 480px) { .brand-cp { gap: 10px; } .brand-cp img { height: 44px; } .cp-div { height: 32px; } .cp-label { font-size: 10px; letter-spacing: .08em; } }
+.site-footer .foot-grid { grid-template-columns: 1fr !important; }

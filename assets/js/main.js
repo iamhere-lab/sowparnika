@@ -110,7 +110,7 @@
     brochure:   { title: "Download the e-brochure", button: "Send Me the Brochure" },
     floor_plan: { title: "Download the floor plans", button: "Send Me the Floor Plans" },
     site_visit: { title: "Book your private site visit", button: "Reserve My Visit Slot" },
-    eoi:        { title: "Get the pre-launch EOI details", button: "Send Me the EOI Details" },
+    eoi:        { title: "Get the EOI details", button: "Send Me the EOI Details" },
     callback:   { title: "Request a call back", button: "Call Me Back" }
   };
 

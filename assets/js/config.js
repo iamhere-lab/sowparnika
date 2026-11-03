@@ -26,7 +26,7 @@ window.SS_CONFIG = {
 
   /* WhatsApp number, digits only with country code, e.g. "919876543210". Buttons stay hidden until set. */
   whatsappNumber: "",
-  whatsappMessage: "Hi, I'm interested in Sowparnika Codename Roots for Tomorrow (The Native), Whitefield–Hoskote. Please share the pre-launch price and floor plans.",
+  whatsappMessage: "Hi, I'm interested in Sowparnika Codename Roots for Tomorrow (The Native), Whitefield–Hoskote. Please share the launch price and floor plans.",
 
   /* Auto-open the enquiry popup after this many seconds (once per session). 0 disables. */
   popupDelaySeconds: 25,

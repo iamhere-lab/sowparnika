@@ -54,6 +54,22 @@
       var a = document.createElement("a"); a.href = CFG.privacyUrl; a.textContent = "Read the privacy policy."; a.rel = "noopener"; s.appendChild(a);
     });
   }
+  /* ---------- channel-partner identity (Google Ads advertiser transparency) ---------- */
+  if (CFG.partnerName) {
+    document.querySelectorAll(".js-partner-name").forEach(function (s) { s.textContent = CFG.partnerName; });
+    document.querySelectorAll(".js-partner-inline").forEach(function (s) { s.textContent = ", " + CFG.partnerName; });
+  }
+  var meta = [];
+  if (CFG.agentRera) meta.push("Agent RERA: " + CFG.agentRera);
+  if (CFG.partnerAddress) meta.push(CFG.partnerAddress);
+  if (CFG.phoneDisplay) meta.push("+91 " + CFG.phoneDisplay);
+  if (CFG.partnerEmail) meta.push(CFG.partnerEmail);
+  document.querySelectorAll(".js-foot-partner-meta").forEach(function (s) { s.textContent = meta.length ? " · " + meta.join(" · ") : ""; });
+  document.querySelectorAll(".js-partner-row").forEach(function (row) {
+    var v = CFG[row.getAttribute("data-key")];
+    if (v) { row.querySelector(".js-partner-val").textContent = (row.getAttribute("data-key") === "phoneDisplay" ? "+91 " : "") + v; row.hidden = false; }
+  });
+  if (!CFG.consentEntity) CFG.consentEntity = CFG.partnerName ? CFG.partnerName + ", authorised channel partner for Sowparnika Projects" : "the authorised channel partner running this website";
   if (CFG.agentRera) document.querySelectorAll(".js-agent-rera").forEach(function (s) { s.textContent = " · Agent RERA: " + CFG.agentRera; });
   if (CFG.whatsappNumber) {
     var waHref = "https://wa.me/" + String(CFG.whatsappNumber).replace(/\D/g, "") + "?text=" + encodeURIComponent(CFG.whatsappMessage || "");

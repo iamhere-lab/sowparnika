@@ -34,11 +34,17 @@ window.SS_CONFIG = {
   /* Optional public brochure URL, shown after a successful "Download Brochure" enquiry. */
   brochureUrl: "",
 
+  /* Channel partner running this site. Shown in the top strip, About Us, footer and consent line.
+   * Google Ads requires the advertiser to be clearly identified: fill these before re-running ads. */
+  partnerName: "",
+  partnerAddress: "",
+  partnerEmail: "",
+
   /* Channel-partner / agent RERA number, shown in the footer when set. */
   agentRera: "",
 
   /* Named in the consent line: who will contact the enquirer. Confirm before launch. */
-  consentEntity: "Sowparnika Projects and its authorised sales partners",
+  consentEntity: "",
 
   siteUrl: "",
   privacyUrl: ""

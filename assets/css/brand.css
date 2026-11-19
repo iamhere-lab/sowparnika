@@ -457,3 +457,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .am-card-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(30,17,10,.72) 0%, rgba(30,17,10,0) 45%); pointer-events: none; }
 .am-card-art span { z-index: 1; color: #FBF3E8; font-weight: 700; text-shadow: 0 1px 3px rgba(0,0,0,.6); }
 .am-card-art span::after { content: " · Representative image"; font-weight: 500; letter-spacing: .08em; text-transform: none; color: rgba(251,243,232,.8); }
+
+/* Hero background: garden-walk photo (couple sits right of centre) */
+/* desktop: zoom in and shift left so the couple sits in the gap between the offer text and the form */
+@media (min-width: 900px) { .banner.hero > .hero-photo { inset: 0 auto 0 -39%; width: 140%; object-position: 67% 45%; } }
+@media (max-width: 899px) { .banner.hero > .hero-photo { object-position: 68% 40%; } }

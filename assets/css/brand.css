@@ -355,3 +355,14 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (max-width: 480px) { .brand-cp { gap: 10px; } .brand-cp img { height: 44px; } .cp-div { height: 32px; } .cp-label { font-size: 10px; letter-spacing: .08em; } }
 .site-footer .foot-grid { grid-template-columns: 1fr !important; }
 .seal-pill { white-space: nowrap; letter-spacing: .2em; }
+
+/* Hero offer badge */
+.hero-offer { display: inline-flex; align-items: stretch; margin: 18px 0 0; max-width: 100%;
+  border: 1px solid rgba(246,227,204,.55); border-radius: 10px; overflow: hidden;
+  background: rgba(30,18,10,.55); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  text-shadow: none; box-shadow: 0 6px 22px rgba(0,0,0,.25); }
+.hero-offer .ho-tag { display: flex; align-items: center; padding: 0 12px; background: #C0532D; color: #fff;
+  font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.hero-offer .ho-text { padding: 10px 14px; color: #F6E3CC; font-family: var(--sans); font-size: 15px; line-height: 1.35; text-align: left; }
+.hero-offer .ho-text b { color: #fff; font-weight: 700; }
+@media (min-width: 900px) { .hero-offer .ho-text { font-size: 17px; padding: 11px 16px; } }

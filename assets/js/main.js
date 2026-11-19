@@ -106,6 +106,7 @@
 
   var INTENTS = {
     general:    { title: "Unlock price & floor plans", button: "Get Price Sheet & Floor Plans" },
+    offer:      { title: "Claim the 5% offer: no Pre-EMI until Jan 2029", button: "Claim This Offer" },
     price:      { title: "Get the complete price sheet", button: "Send Me the Price Sheet" },
     brochure:   { title: "Download the e-brochure", button: "Send Me the Brochure" },
     floor_plan: { title: "Download the floor plans", button: "Send Me the Floor Plans" },

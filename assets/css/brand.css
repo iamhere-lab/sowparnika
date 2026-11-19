@@ -364,21 +364,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   text-transform: uppercase; color: rgba(246,227,204,.82); }
 .hero-specs dd { margin: 0; font-family: var(--sans); font-size: 17px; font-weight: 500; line-height: 1.35; color: #fff; }
 .hero-specs .hs-price dd { font-family: var(--serif); font-size: 27px; font-weight: 700; }
-.hero-specs .hs-offer { position: relative; margin: 10px 0 0; padding: 14px 16px; border: 2px solid #F6E3CC;
-  border-radius: 12px; background: #C0532D; overflow: hidden; text-shadow: none;
-  box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 0 4px rgba(192,83,45,.35); grid-template-columns: 100px 1fr; }
-.hero-specs .hs-offer dt { color: #FFE7C2; font-weight: 800; }
-.hero-specs .hs-offer dd { font-size: 17px; color: #fff; }
-.hero-specs .hs-offer dd b { display: block; font-family: var(--serif); font-size: 1.35em; font-weight: 700; color: #FFE7C2; }
-.hero-specs .hs-offer::after { content: ""; position: absolute; top: 0; bottom: 0; width: 40%; left: -60%;
-  background: linear-gradient(100deg, transparent, rgba(255,255,255,.32), transparent);
-  animation: hoShine 3.2s ease-in-out 1s infinite; pointer-events: none; }
-@keyframes hoShine { 0% { left: -60%; } 45%, 100% { left: 130%; } }
-@media (prefers-reduced-motion: reduce) { .hero-specs .hs-offer::after { display: none; } }
 @media (min-width: 900px) {
   .hero-specs dd { font-size: 18px; }
   .hero-specs .hs-price dd { font-size: 32px; }
-  .hero-specs .hs-offer dd { font-size: 19px; }
 }
 @media (max-width: 899px) {
   .hero-specs { margin-left: auto; margin-right: auto; }
@@ -386,5 +374,42 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .hero-specs dt { font-size: 11px; letter-spacing: .16em; }
   .hero-specs dd { font-size: 15px; }
   .hero-specs .hs-price dd { font-size: 23px; }
-  .hero-specs .hs-offer { grid-template-columns: 78px 1fr; padding: 12px 14px; }
+}
+
+/* Hero offer card: takes the place of the hero form; its button opens the enquiry popup */
+.hero-offer-card { position: relative; width: 100%; max-width: 420px; margin: 0 auto; padding: 30px 26px 22px;
+  text-align: center; color: var(--ink); background: #FBF3E8; border-radius: 18px; overflow: hidden;
+  box-shadow: 0 40px 80px -30px rgba(0,0,0,.7), 0 0 0 6px rgba(192,83,45,.9), 0 0 0 9px rgba(251,243,232,.9); }
+.hero-offer-card::before { content: ""; position: absolute; inset: 10px; border: 1.5px dashed rgba(192,83,45,.55);
+  border-radius: 12px; pointer-events: none; }
+.hero-offer-card > * { position: relative; margin: 0; }
+.hoc-tag { display: inline-block; padding: 7px 16px; border-radius: 999px; background: #C0532D; color: #fff;
+  font-family: var(--sans); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+  animation: hocPulse 2.4s ease-in-out infinite; }
+@keyframes hocPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(192,83,45,.55); } 50% { box-shadow: 0 0 0 10px rgba(192,83,45,0); } }
+.hoc-pay { margin-top: 14px; font-family: var(--serif); color: #8F3A1D; line-height: .9; }
+.hoc-pay .hoc-small { font-size: 30px; font-weight: 600; vertical-align: middle; }
+.hoc-pay .hoc-big { font-size: 104px; font-weight: 700; color: #C0532D; letter-spacing: -.02em; vertical-align: middle; }
+.hoc-plus { margin-top: 2px; font-family: var(--serif); font-size: 28px; font-weight: 700; color: #C0532D; line-height: 1; }
+.hoc-emi { margin-top: 6px; font-family: var(--sans); font-size: 22px; font-weight: 600; line-height: 1.2; color: var(--ink); }
+.hoc-emi b { display: inline-block; margin-top: 4px; font-family: var(--serif); font-size: 34px; font-weight: 700; color: #8F3A1D; }
+.hoc-note { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(143,58,29,.25);
+  font-family: var(--sans); font-size: 14px; color: #6b4a3a; }
+.hoc-cta { position: relative; overflow: hidden; width: 100%; min-height: 54px; margin-top: 16px; border-radius: 999px;
+  background: #C0532D; border-color: #C0532D; color: #fff; font-size: 14px; font-weight: 700; letter-spacing: .1em; }
+.hoc-cta:hover { background: #9c4526; border-color: #9c4526; }
+.hoc-cta::after { content: ""; position: absolute; top: 0; bottom: 0; width: 35%; left: -50%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.45), transparent); animation: hoShine 3s ease-in-out 1.2s infinite; }
+@keyframes hoShine { 0% { left: -50%; } 45%, 100% { left: 130%; } }
+.hoc-fine { margin-top: 10px; font-family: var(--sans); font-size: 11px; line-height: 1.4; color: #8a6d5e; }
+@media (prefers-reduced-motion: reduce) { .hoc-tag, .hoc-cta::after { animation: none; } }
+@media (min-width: 900px) { .hero-offer-card { margin: 0 0 0 auto; padding: 34px 30px 24px; } .hoc-pay .hoc-big { font-size: 118px; } }
+@media (max-width: 899px) { .hero-offer-card { margin-top: 8px; } .hoc-pay .hoc-big { font-size: 92px; } .hoc-emi b { font-size: 30px; } }
+/* Phones: project name, then the offer, then the spec rows, so the offer is on the first screen */
+@media (max-width: 899px) {
+  .hero-grid { justify-items: center; }
+  .hero-copy { display: contents; }
+  .hero-copy .seal { order: 1; margin-bottom: 6px; }
+  .hero-offer-card { order: 2; margin-top: 0; }
+  .hero-specs { order: 3; margin-top: 4px; }
 }

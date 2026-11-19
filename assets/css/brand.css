@@ -413,3 +413,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .hero-offer-card { order: 2; margin-top: 0; }
   .hero-specs { order: 3; margin-top: 4px; }
 }
+
+.offer-head{margin:0 0 14px;text-align:left} .offer-head p{margin:0}
+.oh-tag{display:inline-block;margin-bottom:10px;padding:6px 14px;border-radius:999px;background:#C0532D;color:#fff;font:800 12px var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.oh-line{font:700 54px/1 var(--serif);color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.6)} .oh-line b{font-size:1.5em;color:#FFB98F}
+.oh-line2{margin-top:6px;font:600 28px/1.2 var(--serif);color:#FFE7C2;text-shadow:0 4px 18px rgba(0,0,0,.6)} .oh-line2 b{color:#fff;border-bottom:3px solid #C0532D}
+.hero-copy .seal{transform:scale(.82);transform-origin:left center;margin-bottom:6px}
+@media(max-width:899px){.offer-head{text-align:center}.oh-line{font-size:40px}.oh-line2{font-size:22px}.hero-copy .seal{transform:none}}
+
+@media(max-width:899px){.hero-form{order:4}}

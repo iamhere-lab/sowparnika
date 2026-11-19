@@ -356,13 +356,22 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .site-footer .foot-grid { grid-template-columns: 1fr !important; }
 .seal-pill { white-space: nowrap; letter-spacing: .2em; }
 
-/* Hero offer badge */
-.hero-offer { display: inline-flex; align-items: stretch; margin: 18px 0 0; max-width: 100%;
-  border: 1px solid rgba(246,227,204,.55); border-radius: 10px; overflow: hidden;
-  background: rgba(30,18,10,.55); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
-  text-shadow: none; box-shadow: 0 6px 22px rgba(0,0,0,.25); }
-.hero-offer .ho-tag { display: flex; align-items: center; padding: 0 12px; background: #C0532D; color: #fff;
-  font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-.hero-offer .ho-text { padding: 10px 14px; color: #F6E3CC; font-family: var(--sans); font-size: 15px; line-height: 1.35; text-align: left; }
-.hero-offer .ho-text b { color: #fff; font-weight: 700; }
-@media (min-width: 900px) { .hero-offer .ho-text { font-size: 17px; padding: 11px 16px; } }
+/* Hero offer badge: solid terracotta banner so it reads first after the price */
+.hero-offer { position: relative; display: inline-flex; align-items: stretch; margin: 20px 0 0; max-width: 100%;
+  border-radius: 12px; overflow: hidden; background: #C0532D; text-shadow: none;
+  border: 2px solid #F6E3CC; box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 0 4px rgba(192,83,45,.35); }
+.hero-offer .ho-tag { display: flex; align-items: center; padding: 0 14px; background: #F6E3CC; color: #8F3A1D;
+  font-family: var(--sans); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+  line-height: 1.15; text-align: center; }
+.hero-offer .ho-text { padding: 12px 16px; color: #fff; font-family: var(--sans); font-size: 17px; font-weight: 500;
+  line-height: 1.3; text-align: left; }
+.hero-offer .ho-text b { display: block; font-family: var(--serif); font-size: 1.3em; font-weight: 700; color: #FFE7C2; }
+.hero-offer::after { content: ""; position: absolute; top: 0; bottom: 0; width: 40%; left: -60%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+  animation: hoShine 3.2s ease-in-out 1s infinite; pointer-events: none; }
+@keyframes hoShine { 0% { left: -60%; } 45%, 100% { left: 130%; } }
+@media (prefers-reduced-motion: reduce) { .hero-offer::after { animation: none; display: none; } }
+@media (min-width: 900px) {
+  .hero-offer .ho-text { font-size: 19px; padding: 14px 20px; }
+  .hero-offer .ho-tag { font-size: 13px; padding: 0 16px; }
+}
